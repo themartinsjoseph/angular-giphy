@@ -15,11 +15,8 @@ app.controller('SearchCtrl', ['$scope', '$http', function($scope, $http){
 					api_key: 'dc6zaTOxFJmzC'
 				}
 			}
-			console.log(req);
-
 			$http(req).then(function success(res){
 				$scope.gifs = res.data.data;
-				console.log(res);
 			}, function error(res){
 				console.log('There was an error', res);
 			});
